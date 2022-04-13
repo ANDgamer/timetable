@@ -91,7 +91,7 @@ main{
 	font-family: 'Nunito', sans-serif;
 	overflow-y: scroll;
 	display: grid;
-	grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+	grid-template: repeat(2, max-content) / repeat(3, 1fr);
 	grid-gap: 20px;
 	padding: 20px;
 }
@@ -144,13 +144,13 @@ main{
 
 @media (max-width: 1024px){
 	main{
-		grid-template: repeat(3, 50%) / repeat(2, 1fr);
+		grid-template: repeat(3, max-content) / repeat(2, 1fr);
 		width: calc(100% - 40px)
 	}
 }
 
 @media (max-width: 666px){
 	main{
-		grid-template: repeat(5, 50%) / repeat(1, 1fr);
+		grid-template: repeat(5, max-content) / repeat(1, 1fr);
 	}
 }
