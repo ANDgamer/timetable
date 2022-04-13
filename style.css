@@ -2,6 +2,15 @@
 	--white-theme-gray: #24292f;
 }
 
+::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: var(--white-theme-gray);
+}
+
 *,
 *:after,
 *:before {
@@ -10,28 +19,13 @@
 	-webkit-tap-highlight-color: #00000000;
 }
 
-button{
-	color: white;
-}
-
-button {
-	cursor: pointer;
-	user-select: none;
-	border: none;
-	font-weight: bold;
-	background: none;
-}
-
-select{
-	border: none;
-}
-
-body{
+html, body{
 	width: 100%;
 	height: 100%;
 	color: black;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 }
 
 header{
@@ -43,6 +37,21 @@ header{
 	justify-content: space-between;
 	color: white;
 }
+
+button {
+	cursor: pointer;
+	user-select: none;
+	border: none;
+	font-weight: bold;
+	background: none;
+	color: white;
+}
+
+select{
+	border: none;
+}
+
+/*----------------------------- header -----------------------------*/
 
 .header__left-part{
 	font-family: 'Roboto', sans-serif;
@@ -67,18 +76,11 @@ header{
 	margin-right: 1.5vh;
 }
 
+/*----------------------------- main -----------------------------*/
+
 main{
 	width: 100%;
 	height: calc(100% - 7vh);
-	text-align: center;
 	font-family: 'Roboto', sans-serif;
+	overflow-y: scroll;
 }
-
-/*::-webkit-scrollbar {
-	width: 7px;
-	border-radius: 20px;
-}
-::-webkit-scrollbar-thumb {
-	border-radius: 20px;
-	background-color: var(--white-theme-gray);
-}*/
