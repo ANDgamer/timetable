@@ -115,13 +115,11 @@ main{
 @media (max-width: 1024px){
 	main{
 		grid-template: repeat(3, 50%) / repeat(2, 1fr);
-		height: calc(150% - 7vh);
 	}
 }
 
 @media (max-width: 666px){
 	main{
 		grid-template: repeat(5, 50%) / repeat(1, 1fr);
-		height: calc(250% - 7vh);
 	}
 }
