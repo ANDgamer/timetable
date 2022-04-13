@@ -81,16 +81,17 @@ select{
 /*----------------------------- main -----------------------------*/
 
 main{
-	width: 100%;
+	width: calc(100% - 32px);
 	height: calc(100% - 7vh);
 	font-family: 'Nunito', sans-serif;
 	overflow-y: scroll;
 	display: grid;
 	grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+	grid-gap: 20px;
+	padding: 20px;
 }
 
 .main__item{
-	margin: 20px;
 	border: 1px solid var(--white-theme-border);
 	border-radius: 6px;
 }
@@ -111,10 +112,12 @@ main{
 	margin: 1vh 0;
 }
 
+/*----------------------------- adaptation -----------------------------*/
 
 @media (max-width: 1024px){
 	main{
 		grid-template: repeat(3, 50%) / repeat(2, 1fr);
+		width: calc(100% - 40px)
 	}
 }
 
