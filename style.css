@@ -1,5 +1,7 @@
 :root{
 	--white-theme-gray: #24292f;
+	--white-theme-border: #d0d7de;
+	--white-theme-subtitle: #f6f8fa;
 }
 
 ::-webkit-scrollbar {
@@ -54,7 +56,7 @@ select{
 /*----------------------------- header -----------------------------*/
 
 .header__left-part{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Nunito', sans-serif;
 }
 
 .header__left-part span{
@@ -81,6 +83,45 @@ select{
 main{
 	width: 100%;
 	height: calc(100% - 7vh);
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	overflow-y: scroll;
+	display: grid;
+	grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+}
+
+.main__item{
+	margin: 20px;
+	border: 1px solid var(--white-theme-border);
+	border-radius: 6px;
+}
+
+.main__day-name{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--white-theme-subtitle);
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 1px solid var(--white-theme-border);
+}
+
+.main__day-name h2{
+	font-size: 3vh;
+	margin: 1vh 0;
+}
+
+
+@media (max-width: 1024px){
+	main{
+		grid-template: repeat(3, 50%) / repeat(2, 1fr);
+		height: calc(150% - 7vh);
+	}
+}
+
+@media (max-width: 666px){
+	main{
+		grid-template: repeat(5, 50%) / repeat(1, 1fr);
+		height: calc(250% - 7vh);
+	}
 }
