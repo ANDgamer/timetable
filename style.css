@@ -5,12 +5,14 @@
 	--subtitle: #f6f8fa;
 	--background: #fff;
 	--text-color: #000;
+	--shadow: #cccccc;
 	/*-------- black theme --------*/
 	--header: #161b22;
-	--border: #30363d;
+	--border: #545c65;
 	--subtitle: #161b22;
-	--background: #0d1117;
-	--text-color: #c9d1d9;
+	--background: #22272e;
+	--text-color: #dfe6ec;
+	--shadow: #191919;
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +39,8 @@ html, body{
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	font-family: 'Nunito', sans-serif;
+	background-color: var(--background);
 }
 
 header{
@@ -47,6 +51,7 @@ header{
 	align-items: center;
 	justify-content: space-between;
 	color: white;
+	box-shadow: 0 1px 5px var(--shadow);
 }
 
 header button{
@@ -55,14 +60,11 @@ header button{
 
 
 main{
-	height: calc(100% - 7vh);
-	font-family: 'Nunito', sans-serif;
 	overflow-y: scroll;
 	display: grid;
 	grid-template: repeat(2, max-content) / repeat(3, 1fr);
 	grid-gap: 20px;
 	padding: 20px;
-	background-color: var(--background);
 	color: var(--text-color);
 }
 
@@ -80,14 +82,10 @@ select{
 
 a{
 	text-decoration: none;
-	color: black;
+	color: var(--text-color);
 }
 
 /*----------------------------- header -----------------------------*/
-
-.header__left-part{
-	font-family: 'Nunito', sans-serif;
-}
 
 .header__left-part span, select{
 	margin-left: 10px;
@@ -113,6 +111,7 @@ a{
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
+	box-shadow: 1px 1px 5px var(--shadow);
 }
 
 .main__day-name{
@@ -134,7 +133,6 @@ a{
 
 .main__lesson{
 	display: flex;
-	
 	align-items: center;
 	padding: 10px;
 }
@@ -157,8 +155,8 @@ a{
 	transform: scale(0.9);
 }
 
-.main__lesson span:nth-child(3){
-	margin: 0 auto;
+.main__lesson a:nth-child(3){
+	margin: 0 auto !important;
 }
 
 /*----------------------------- adaptation -----------------------------*/
