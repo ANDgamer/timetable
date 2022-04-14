@@ -32,7 +32,7 @@ html, body{
 
 header{
 	width: 100%;
-	height: 7vh;
+	padding: 10px 0;
 	background-color: var(--white-theme-gray);
 	display: flex;
 	align-items: center;
@@ -64,29 +64,26 @@ a{
 	font-family: 'Nunito', sans-serif;
 }
 
-.header__left-part span{
-	margin-left: 1.5vh;
-	font-size: 2vh;
+.header__left-part span, select{
+	margin-left: 10px;
+	font-size: 1.3rem;
 }
 
 .header__left-part select{
 	background-color: var(--white-theme-gray);
 	color: white;
-	margin-left: 1vh;
 	height: 3.5vh;
 	border-radius: 3px;
-	font-size: 2vh;
 }
 
 .header__right-part button{
-	font-size: 3vh;
-	margin-right: 1.5vh;
+	font-size: 1.6rem;
+	margin-right: 10px;
 }
 
 /*----------------------------- main -----------------------------*/
 
 main{
-	width: calc(100% - 32px);
 	height: calc(100% - 7vh);
 	font-family: 'Nunito', sans-serif;
 	overflow-y: scroll;
@@ -114,9 +111,8 @@ main{
     border-bottom: 1px solid var(--white-theme-border);
 }
 
-.main__day-name h2{
-	font-size: 3vh;
-	margin: 1vh 0;
+.main__item h2{
+	padding: 1vh 0;
 }
 
 /*----------------------------- lessons -----------------------------*/
@@ -145,12 +141,19 @@ main{
 @media (max-width: 1024px){
 	main{
 		grid-template: repeat(3, max-content) / repeat(2, 1fr);
-		width: calc(100% - 40px)
 	}
 }
 
 @media (max-width: 666px){
 	main{
 		grid-template: repeat(5, max-content) / repeat(1, 1fr);
+	}
+}
+@media (max-width: 440px){
+	.header__left-part span, select{
+		font-size: 4.5vw;
+	}
+	.header__right-part button{
+		font-size: 5.5vw;
 	}
 }
