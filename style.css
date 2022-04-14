@@ -6,11 +6,11 @@
 	--background: #fff;
 	--text-color: #000;
 	/*-------- black theme --------*/
-	/*--header: #161b22;
+	--header: #161b22;
 	--border: #30363d;
 	--subtitle: #161b22;
 	--background: #0d1117;
-	--text-color: #c9d1d9;*/
+	--text-color: #c9d1d9;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +27,7 @@
 *:before {
 	padding: 0;
 	margin: 0;
-	-webkit-tap-highlight-color: #000;
+	-webkit-tap-highlight-color: #00000000;
 }
 
 html, body{
