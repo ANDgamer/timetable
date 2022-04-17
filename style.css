@@ -1,18 +1,21 @@
 :root{
-	/*-------- white theme --------*/
 	--header: #24292f;
 	--border: #d0d7de;
 	--subtitle: #f6f8fa;
 	--background: #fff;
 	--text-color: #000;
 	--shadow: #cccccc;
-	/*-------- black theme --------*/
-	--header: #161b22;
-	--border: #545c65;
-	--subtitle: #161b22;
-	--background: #22272e;
-	--text-color: #dfe6ec;
-	--shadow: #191919;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root{
+		--header: #161b22;
+		--border: #545c65;
+		--subtitle: #161b22;
+		--background: #22272e;
+		--text-color: #dfe6ec;
+		--shadow: #191919;
+	}
 }
 
 ::-webkit-scrollbar {
