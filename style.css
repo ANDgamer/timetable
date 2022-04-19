@@ -1,10 +1,12 @@
-:root{
-	--header: #24292f;
-	--border: #d0d7de;
-	--subtitle: #f6f8fa;
-	--background: #fff;
-	--text-color: #000;
-	--shadow: #cccccc;
+@media (prefers-color-scheme: light) {
+	:root{
+		--header: #24292f;
+		--border: #d0d7de;
+		--subtitle: #f6f8fa;
+		--background: #fff;
+		--text-color: #000;
+		--shadow: #cccccc;
+	}
 }
 
 @media (prefers-color-scheme: dark) {
